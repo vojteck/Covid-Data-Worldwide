@@ -11,18 +11,16 @@ export function DataCard(props) {
                     <Card.Header as="h5">
                         {header}
                     </Card.Header>
-                    <Card.Text>
-                        <Table hover>
-                            <tbody>
-                                {data && data.map(action => (
-                                    <tr>
-                                        <td>{action.name}</td>
-                                        <td style={{ textAlign: 'right' }}>{humanizeNumber(action.value)}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </Table>
-                    </Card.Text>
+                    <Table hover>
+                        <tbody>
+                            {data && data.map((action, idx) => (
+                                <tr key={idx}>
+                                    <td>{action.name}</td>
+                                    <td style={{ textAlign: 'right' }}>{humanizeNumber(action.value)}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </Table>
                 </Card.Body>
             </Card>
         </>
