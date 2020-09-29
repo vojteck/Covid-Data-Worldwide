@@ -1,7 +1,9 @@
 export function humanizeNumber(number) {
+    if (!isNumber(number)) return number;
+
     var strNumberParts = number.toString().split('.');
 
-    var strNumber = strNumberParts[0].split('').reverse().join('');
+    var strNumber = strNumberParts[0]?.split('').reverse().join('');
     var rest = strNumberParts[1] === undefined ? '' : '.' + strNumberParts[1];
 
     var result = [];
@@ -11,4 +13,8 @@ export function humanizeNumber(number) {
     }
 
     return result.join('').split('').reverse().join('') + rest;
+}
+
+const isNumber = (numberCandidate) => {
+	return typeof numberCandidate === 'number' ? true: false
 }

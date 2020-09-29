@@ -10,7 +10,7 @@ export function CountriesData() {
 
     function moveToDetails(element) {
         if (element.country === '') return;
-            history.push(history.location.pathname + '/' + encodeURIComponent(element.country));
+        history.push(history.location.pathname + '/' + encodeURIComponent(element.country));
     }
 
     if (!result) {

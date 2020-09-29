@@ -17,7 +17,7 @@ export function DataCard(props) {
                                 {data && data.map(action => (
                                     <tr>
                                         <td>{action.name}</td>
-                                        <td style={{ textAlign: 'right' }}>{typeof action.value === 'string' ? action.value : humanizeNumber(action.value)}</td>
+                                        <td style={{ textAlign: 'right' }}>{humanizeNumber(action.value)}</td>
                                     </tr>
                                 ))}
                             </tbody>

@@ -10,7 +10,7 @@ export function ContinentsData() {
 
     function moveToDetails(element) {
         if (element.continent === '') return;
-            history.push(history.location.pathname + '/' + encodeURIComponent(element.continent));
+        history.push(history.location.pathname + '/' + encodeURIComponent(element.continent));
     }
 
     if (!result) {
